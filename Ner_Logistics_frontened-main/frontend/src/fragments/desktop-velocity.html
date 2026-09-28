@@ -1,0 +1,49 @@
+<div class="app-content">
+<div class="page-head">
+<div><div class="page-title" data-i18n="page_velocity_title">Velocity AI Dispatch</div><div class="page-sub">Chat with Velocity to get the safest, fastest driver and vehicle match — trained on incident-report photos and live Google Maps data.</div></div>
+<div class="page-actions"><span class="vel-badge"><svg fill="none" stroke="currentColor" stroke-width="2.5" viewbox="0 0 24 24"><path d="M13 2 3 14h7l-1 8 11-14h-7l1-6z"></path></svg>Model Active</span></div>
+</div>
+<div class="velocity-grid">
+<div class="vel-chat-shell">
+<div class="vel-chat-head">
+<div class="vel-chat-avatar"><svg fill="none" stroke="currentColor" stroke-width="2.4" viewbox="0 0 24 24"><path d="M13 2 3 14h7l-1 8 11-14h-7l1-6z"></path></svg></div>
+<div><div class="vel-chat-title">Velocity AI</div><div class="vel-chat-sub"><span class="dot-live"></span>Online · matching in real time</div></div>
+</div>
+<div class="vel-chat-body" id="velChatBodyDesktop">
+<div class="vel-msg bot">Hi, I'm Velocity 👋 Tell me your pickup and drop location, and I'll find the safest, fastest driver for you.</div>
+</div>
+<div class="vel-quick-replies" id="velQuickRepliesDesktop">
+<button class="vel-quick-btn" onclick="velSendQuick('Sector 4 to Main Terminal', 'velChatBodyDesktop')">Sector 4 → Main Terminal</button>
+<button class="vel-quick-btn" onclick="velSendQuick('I need 2 vehicles going different directions', 'velChatBodyDesktop')">I need 2 vehicles, different directions</button>
+<button class="vel-quick-btn" onclick="velSendQuick('Confirm booking', 'velChatBodyDesktop')">Confirm booking</button>
+</div>
+<div class="vel-chat-input-row">
+<input id="velInputDesktop" onkeydown="if(event.key==='Enter') velSend('velInputDesktop','velChatBodyDesktop')" placeholder="Type your pickup &amp; drop, or ask Velocity anything..." type="text"/>
+<button class="vel-chat-send" onclick="velSend('velInputDesktop','velChatBodyDesktop')"><svg fill="none" stroke="currentColor" stroke-width="2.4" viewbox="0 0 24 24"><path d="M22 2 11 13"></path><path d="M22 2l-7 20-4-9-9-4 20-7z"></path></svg></button>
+</div>
+</div>
+<div>
+<div class="vel-side-card">
+<h4>How Velocity learns</h4>
+<ul class="vel-reason-list">
+<li><svg fill="none" stroke="currentColor" stroke-width="3" viewbox="0 0 24 24"><path d="M20 6L9 17l-5-5"></path></svg>Trained on photos uploaded to Incident Reports, so it recognizes landslides, flooding and blocked roads</li>
+<li><svg fill="none" stroke="currentColor" stroke-width="3" viewbox="0 0 24 24"><path d="M20 6L9 17l-5-5"></path></svg>Combines that with live Google Maps data for turn-by-turn shortest paths</li>
+<li><svg fill="none" stroke="currentColor" stroke-width="3" viewbox="0 0 24 24"><path d="M20 6L9 17l-5-5"></path></svg>Improves continuously as more field reports and outcomes are recorded</li>
+</ul>
+</div>
+<div class="vel-side-card">
+<h4>Matching factors</h4>
+<div class="vel-factor-row"><span class="k">Proximity to pickup</span><span class="v">35%</span></div>
+<div class="vel-factor-row"><span class="k">Vehicle availability</span><span class="v">25%</span></div>
+<div class="vel-factor-row"><span class="k">Road safety score</span><span class="v">30%</span></div>
+<div class="vel-factor-row"><span class="k">Driver rating</span><span class="v">10%</span></div>
+</div>
+<div class="vel-side-card">
+<h4>Nearby available drivers</h4>
+<div class="vel-driver-row"><span class="vel-driver-dot"></span><div><div class="vel-driver-name">Rajesh Kumar · Tata 407</div><div class="vel-driver-meta">0.8 km · Available</div></div></div>
+<div class="vel-driver-row"><span class="vel-driver-dot"></span><div><div class="vel-driver-name">Amit Singh · Bolero Pickup</div><div class="vel-driver-meta">1.6 km · Available</div></div></div>
+<div class="vel-driver-row"><span class="vel-driver-dot busy"></span><div><div class="vel-driver-name">Prakash Rai · Tata Ace</div><div class="vel-driver-meta">2.3 km · On a trip</div></div></div>
+</div>
+</div>
+</div>
+</div>

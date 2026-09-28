@@ -1,0 +1,12 @@
+<div class="mobile-more-panel" id="mobileMorePanel" onclick="if(event.target===this) toggleMobileMore(false)">
+<div class="mobile-more-sheet"><div class="mobile-more-head"><h3 data-i18n="panel_all_operations">All Operations</h3><button class="mobile-more-close" onclick="toggleMobileMore(false)"><svg fill="none" stroke="currentColor" stroke-width="2.4" viewbox="0 0 24 24"><path d="M6 6l12 12M18 6L6 18"></path></svg></button></div>
+<div class="mobile-menu-grid">
+<button class="mobile-menu-item" onclick="goto('deliveries');toggleMobileMore(false)"><svg fill="none" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24"><rect height="4" rx="1" width="18" x="3" y="4"></rect><path d="M5 8v11a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V8"></path></svg><span data-i18n="nav_deliveries">Deliveries</span></button>
+<button class="mobile-menu-item danger" onclick="goto('report');toggleMobileMore(false)"><svg fill="none" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24"><path d="M12 3 2 20h20L12 3z"></path><path d="M12 10v4"></path></svg><span data-i18n="nav_incidents">Incident</span></button>
+<button class="mobile-menu-item" onclick="goto('alerts');toggleMobileMore(false)"><svg fill="none" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24"><path d="M6 8a6 6 0 0 1 12 0c0 5 2 6 2 6H4s2-1 2-6"></path><path d="M10 20a2 2 0 0 0 4 0"></path></svg><span data-i18n="nav_alerts">Alerts</span></button>
+<button class="mobile-menu-item" onclick="goto('weather');toggleMobileMore(false)"><svg fill="none" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24"><path d="M8 17a4 4 0 1 1 1.2-7.8A5 5 0 0 1 19 11a3.5 3.5 0 0 1-1 6.9H8z"></path></svg><span data-i18n="nav_weather">Weather</span></button>
+<button class="mobile-menu-item" onclick="goto('reports');toggleMobileMore(false)"><svg fill="none" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24"><path d="M4 20V10M12 20V4M20 20v-7"></path></svg><span data-i18n="nav_reports">Reports</span></button>
+<button class="mobile-menu-item" onclick="goto('settings');toggleMobileMore(false)"><svg fill="none" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24"><circle cx="12" cy="12" r="3"></circle><path d="M12 2v3M12 19v3M2 12h3M19 12h3"></path></svg><span data-i18n="nav_settings">Settings</span></button>
+</div>
+</div>
+</div>

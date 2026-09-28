@@ -1,0 +1,27 @@
+<div class="app-content">
+<div class="page-head">
+<div><div class="page-title" data-i18n="page_roads_title">Road Accessibility Monitor</div><div class="page-sub" data-i18n="page_roads_sub">Real-time status of critical infrastructure routes.</div></div>
+<div class="page-actions">
+<button class="btn-outline" id="roadsExportBtn"><svg fill="none" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24"><path d="M12 3v12M7 10l5 5 5-5"></path><path d="M5 21h14"></path></svg>Export Data</button>
+<button class="btn-solid-sm" onclick="goto('report')"><svg fill="none" stroke="currentColor" stroke-width="2.4" viewbox="0 0 24 24"><path d="M12 5v14M5 12h14"></path></svg>Report Status</button>
+</div>
+</div>
+<div class="panel-card">
+<div class="filter-bar">
+<div class="search-input"><svg fill="none" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24"><circle cx="11" cy="11" r="7"></circle><path d="M21 21l-4.3-4.3"></path></svg><input id="roadsSearchInput" placeholder="Search roads, routes..."/></div>
+<div class="select-fake-wrap"><select id="roadsDistrictFilter" class="select-fake"><option value="">All Districts</option></select><svg class="select-caret" fill="none" stroke="currentColor" stroke-width="2.4" viewbox="0 0 24 24"><path d="M6 9l6 6 6-6"></path></svg></div>
+<div class="select-fake-wrap"><select id="roadsStatusFilter" class="select-fake"><option value="">Status: All</option><option value="Accessible">Accessible</option><option value="Risky">Risky</option><option value="Blocked">Blocked</option></select><svg class="select-caret" fill="none" stroke="currentColor" stroke-width="2.4" viewbox="0 0 24 24"><path d="M6 9l6 6 6-6"></path></svg></div>
+<div class="filter-flag" id="roadsClearFilters" style="display:none;"><svg fill="none" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24"><path d="M6 6l12 12M18 6L6 18"></path></svg>Clear Filters</div>
+</div>
+<table class="roads-table">
+<thead><tr><th>Road Name</th><th>District</th><th>Current Status</th><th>Risk Level</th><th>Last Updated</th></tr></thead>
+<tbody id="roadsTableBody">
+<tr><td colspan="5" style="text-align:center;padding:24px;color:var(--text-soft);">Loading roads…</td></tr>
+</tbody>
+</table>
+<div class="table-foot">
+<div id="roadsTableFootLabel">Loading…</div>
+<div class="pagination" id="roadsPagination"></div>
+</div>
+</div>
+</div>

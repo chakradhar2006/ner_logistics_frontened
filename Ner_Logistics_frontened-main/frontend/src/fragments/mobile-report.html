@@ -1,0 +1,34 @@
+<div class="view" data-page="report" style="flex-direction:column; height:100%;">
+<div class="mtop">
+<div class="back" onclick="goto('dashboard')"><svg fill="none" stroke="currentColor" stroke-width="2.2" viewbox="0 0 24 24"><path d="M19 12H5M12 19l-7-7 7-7"></path></svg></div>
+<div class="logo-mark" style="width:26px;height:26px;"><svg fill="none" height="14" viewbox="0 0 24 24" width="14"><circle cx="9" cy="7" fill="#7C3AED" r="4.2"></circle><circle cx="15" cy="8.5" fill="#2563EB" r="3.6"></circle><circle cx="10.5" cy="14" fill="#EC4899" r="4.6"></circle></svg></div>
+<div class="mtitle" style="font-size:14.5px;">NER Logistics</div>
+<div class="mtop-right"><div class="mavatar" onclick="goto('profile')" style="cursor:pointer;" title="Open account profile"><svg fill="none" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24"><circle cx="12" cy="8" r="3.5"></circle><path d="M5 20c1.2-3.6 4-5.5 7-5.5s5.8 1.9 7 5.5"></path></svg></div></div>
+</div>
+<div class="mscroll">
+<div class="field-banner"><h1>Report Incident</h1><p>Field submission protocol active</p></div>
+<div class="mform">
+<div class="mform-label">Incident Type</div>
+<select class="mform-select" id="incidentTypeMobile"><option value="">Select an incident category...</option><option>Road blockage</option><option>Landslide</option><option>Heavy rain</option><option>Vehicle breakdown</option></select>
+<div class="mform-label">Severity Level</div>
+<div class="severity-row" id="incidentSeverityMobile"><div class="sev-btn" data-value="Low">Low</div><div class="sev-btn" data-value="Medium">Med</div><div class="sev-btn active" data-value="High">High</div><div class="sev-btn" data-value="Critical">Critical</div></div>
+<div class="mform-label">Location Data</div>
+<div class="gps-card">
+<div class="gps-row"><svg fill="none" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24"><path d="M12 22s7-6.2 7-12a7 7 0 1 0-14 0c0 5.8 7 12 7 12z"></path><circle cx="12" cy="10" r="2.4"></circle></svg><div><div class="gps-title">Awaiting GPS fix...</div><div class="gps-sub">Accuracy: ±--m</div></div></div>
+<button class="gps-btn"><svg fill="none" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24"><circle cx="12" cy="12" r="3"></circle><path d="M12 2v3M12 19v3M2 12h3M19 12h3"></path></svg>Acquire GPS Lock</button>
+</div>
+<div class="mform-label">Visual Evidence</div>
+<div class="evidence-upload-wrap">
+<label class="evidence-upload"><input accept="image/jpeg,image/png" capture="environment" id="incidentPhotoMobile" type="file"/><div class="evidence-box"><svg fill="none" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24"><rect height="13" rx="2" width="18" x="3" y="7"></rect><path d="M8 7l2-3h4l2 3"></path><circle cx="12" cy="13.5" r="3.5"></circle></svg><span>Capture Photo</span></div></label>
+<label class="evidence-upload"><input accept="image/jpeg,image/png" id="incidentGalleryMobile" type="file"/><div class="evidence-box"><svg fill="none" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24"><rect height="18" rx="2" width="18" x="3" y="3"></rect><circle cx="8.5" cy="8.5" r="1.5"></circle><path d="M21 15l-5-5L5 21"></path></svg><span>Select Gallery</span></div></label>
+</div>
+<div class="evidence-preview" id="incidentPhotoPreviewMobile"><img alt="Incident evidence preview"/><div><strong class="preview-name">Photo selected</strong><small class="preview-geo">Ready to attach GPS location</small></div></div>
+<div class="geotag-row"><div class="geotag-copy"><svg fill="none" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24"><path d="M12 22s7-6.2 7-12a7 7 0 1 0-14 0c0 5.8 7 12 7 12z"></path><circle cx="12" cy="10" r="2.4"></circle></svg><div><strong>Geotag this image</strong><small id="incidentGeoStatusMobile">Attach current GPS coordinates to the incident photo.</small></div></div><button class="geotag-btn" onclick="geotagIncident('mobile')" type="button">Get GPS &amp; Geotag</button></div>
+<div class="mform-label">Incident Description</div>
+<textarea class="mtextarea" id="incidentDescMobile" placeholder="Provide detailed field observations..."></textarea>
+<div class="incident-submit-msg" id="incidentSubmitMsgMobile" style="display:none;font-size:13px;margin:8px 0;"></div>
+</div>
+</div>
+<button class="submit-report-btn" id="incidentSubmitMobile"><svg fill="none" stroke="currentColor" stroke-width="2.2" viewbox="0 0 24 24"><path d="M22 2L11 13"></path><path d="M22 2l-7 20-4-9-9-4 20-7z"></path></svg>Submit Report</button>
+<div class="online-bar">SYSTEM ONLINE - Ready to transmit</div>
+</div>

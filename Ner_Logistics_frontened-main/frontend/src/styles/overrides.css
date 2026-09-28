@@ -1,0 +1,62 @@
+/* ==========================================================================
+   Overrides: adapt the reference "device mockup" CSS to a real, responsive
+   single web app (no phone bezel, no side-by-side desktop/mobile frames).
+   Visual language (colors, radii, spacing, components) is unchanged.
+   ========================================================================== */
+
+.app-shell{ min-height: calc(100vh - 0px); }
+.app-content{ min-height: 100vh; }
+
+/* Responsive visibility helpers */
+.desktop-only{ display:block; }
+.mobile-only{ display:none; }
+
+@media (max-width: 900px){
+  .desktop-only{ display:none !important; }
+  .mobile-only{ display:block !important; }
+}
+
+/* Mobile screen takes the full viewport instead of a 375px phone frame */
+.mobile-screen{
+  background:var(--bg);
+  min-height:100vh;
+  display:flex;
+  flex-direction:column;
+  position:relative;
+}
+.mobile-screen .mscroll{
+  flex:1;
+  overflow-y:auto;
+  padding-bottom:96px;
+}
+.mobile-screen .mbottomnav{
+  position:fixed;
+  left:0; right:0; bottom:0;
+  max-width:100vw;
+  z-index:40;
+}
+.mobile-screen .vel-chat-shell{
+  padding-bottom:0;
+}
+
+/* On mobile chat pages, leave room so the bottom nav never covers the input */
+.mobile-screen{ padding-bottom:0; }
+
+/* Mobile "more" hamburger sheet: fixed full-viewport overlay */
+.mobile-more-panel{
+  position:fixed;
+  inset:0;
+  z-index:200;
+}
+
+/* Auth screens: mobile variant fills the viewport like every other mobile page */
+.mobile-screen.auth-mobile-screen{
+  min-height:100vh;
+}
+
+/* Keep desktop auth split screen filling the viewport rather than a boxed 700px frame */
+.auth-split{ min-height:100vh; }
+
+/* Small nicety: make side-link act like a real nav item / cursor */
+.side-link{ user-select:none; }
+.mnav-item, .mobile-menu-item, .mact-item, .mobile-list-item{ user-select:none; }

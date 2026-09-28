@@ -1,0 +1,25 @@
+<div class="app-content">
+<div class="page-head">
+<div><div class="page-title" data-i18n="page_weather_title">Weather</div><div class="page-sub">Live conditions detected from your device location — helps Velocity route around rain, fog and storms.</div></div>
+<div class="page-actions"><button class="btn-outline" onclick="fetchLiveWeather('Desktop')"><svg fill="none" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24"><path d="M4 12a8 8 0 0 1 14-5M20 12a8 8 0 0 1-14 5"></path><path d="M17 3v4h-4M7 21v-4h4"></path></svg>Refresh</button></div>
+</div>
+<div class="weather-hero" id="weatherHeroDesktop">
+<div class="loc" id="weatherLocDesktop"><svg fill="none" height="13" stroke="currentColor" stroke-width="2.4" viewbox="0 0 24 24" width="13"><path d="M12 21s7-6.5 7-11a7 7 0 0 0-14 0c0 4.5 7 11 7 11z"></path><circle cx="12" cy="10" r="2.4"></circle></svg>Detecting your location...</div>
+<div class="temp" id="weatherTempDesktop">--°</div>
+<div class="desc" id="weatherDescDesktop">Fetching live conditions</div>
+<div class="meta">
+<div>Wind<b id="weatherWindDesktop">-- km/h</b></div>
+<div>Humidity<b id="weatherHumidityDesktop">--%</b></div>
+<div>Feels like<b id="weatherFeelsDesktop">--°</b></div>
+</div>
+</div>
+<div class="weather-forecast" id="weatherForecastDesktop"></div>
+<div class="weather-advisory" id="weatherAdvisoryDesktop" style="display:none;">
+<svg fill="none" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24"><path d="M12 3 2 20h20L12 3z"></path><path d="M12 10v4"></path><circle cx="12" cy="17" fill="currentColor" r=".6"></circle></svg>
+<p id="weatherAdvisoryTextDesktop"></p>
+</div>
+<div class="panel-card">
+<div class="panel-head"><h3>Regional Advisories — Northeast India</h3><span class="view-all" id="disasterFeedMeta"></span></div>
+<div id="disasterFeedListDesktop"><div style="padding:14px 4px;color:var(--text-soft);font-size:13px;">Loading active natural events and recent earthquakes (NASA EONET + USGS)…</div></div>
+</div>
+</div>

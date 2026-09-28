@@ -1,0 +1,22 @@
+<div class="app-content desktop-operation">
+<div class="desktop-operation-head"><div><div class="desktop-operation-title">Report Incident</div><div class="desktop-operation-sub">Capture field incidents with location, severity and visual evidence.</div></div><div class="online-badge">SYSTEM ONLINE</div></div>
+<div class="operation-grid">
+<div class="operation-card"><h3>Incident details</h3>
+<div class="desktop-field"><label>Incident Type</label><select id="incidentTypeDesktop"><option value="">Select an incident category...</option><option>Road blockage</option><option>Landslide</option><option>Heavy rain</option><option>Vehicle breakdown</option></select></div>
+<div class="desktop-field"><label>Severity Level</label><div class="desktop-severity" id="incidentSeverityDesktop"><span data-value="Low">Low</span><span data-value="Medium">Medium</span><span class="active" data-value="High">High</span><span data-value="Critical">Critical</span></div></div>
+<div class="desktop-field"><label>Location Data</label><div class="gps-desktop"><svg fill="none" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24"><path d="M12 22s7-6.2 7-12a7 7 0 1 0-14 0c0 5.8 7 12 7 12z"></path><circle cx="12" cy="10" r="2.4"></circle></svg><div><strong>GPS location available</strong><small>Sector 4 · Accuracy ±18m</small></div></div></div>
+<div class="desktop-field"><label>Visual Evidence</label>
+<div class="desktop-evidence">
+<label class="evidence-upload"><input accept="image/jpeg,image/png" capture="environment" id="incidentPhotoDesktop" type="file"/><div class="evidence-box"><svg fill="none" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24"><rect height="13" rx="2" width="18" x="3" y="7"></rect><path d="M8 7l2-3h4l2 3"></path><circle cx="12" cy="13.5" r="3.5"></circle></svg><span>Capture / Upload Photo</span></div></label>
+<label class="evidence-upload"><input accept="image/jpeg,image/png" id="incidentGalleryDesktop" type="file"/><div class="evidence-box"><svg fill="none" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24"><rect height="18" rx="2" width="18" x="3" y="3"></rect><circle cx="8.5" cy="8.5" r="1.5"></circle><path d="M21 15l-5-5L5 21"></path></svg><span>Select from Gallery</span></div></label>
+</div>
+<div class="evidence-preview" id="incidentPhotoPreviewDesktop"><img alt="Incident evidence preview"/><div><strong class="preview-name">Photo selected</strong><small class="preview-geo">Ready to attach GPS location</small></div></div>
+<div class="geotag-row"><div class="geotag-copy"><svg fill="none" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24"><path d="M12 22s7-6.2 7-12a7 7 0 1 0-14 0c0 5.8 7 12 7 12z"></path><circle cx="12" cy="10" r="2.4"></circle></svg><div><strong>Geotag this image</strong><small id="incidentGeoStatusDesktop">Attach current GPS coordinates to the incident photo.</small></div></div><button class="geotag-btn" onclick="geotagIncident('desktop')" type="button">Get GPS &amp; Geotag</button></div>
+</div>
+<div class="desktop-field"><label>Incident Description</label><textarea id="incidentDescDesktop" placeholder="Provide detailed field observations..."></textarea></div>
+<div class="incident-submit-msg" id="incidentSubmitMsgDesktop" style="display:none;font-size:13px;margin-bottom:10px;"></div>
+<button class="desktop-submit" id="incidentSubmitDesktop"><svg fill="none" stroke="currentColor" stroke-width="2.2" viewbox="0 0 24 24"><path d="M22 2L11 13"></path><path d="M22 2l-7 20-4-9-9-4 20-7z"></path></svg>Submit Incident Report</button>
+</div>
+<div><div class="desktop-status-card"><div class="desktop-status-icon"><svg fill="none" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24"><path d="M12 3 2 20h20L12 3z"></path><path d="M12 10v4"></path></svg></div><h4>Field reporting</h4><p>Reports are stored locally if connectivity drops and can be synchronized automatically when the connection returns.</p></div><div class="desktop-status-card" style="margin-top:14px;"><h4>Required evidence</h4><p>GPS location, severity and a clear description. Photos can be attached from the field workflow.</p></div></div>
+</div>
+</div>

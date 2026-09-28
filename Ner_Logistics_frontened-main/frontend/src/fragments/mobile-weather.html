@@ -1,0 +1,21 @@
+<div class="view mobile-page" data-page="weather"><div class="mtop"><div class="back" onclick="goto('dashboard')"><svg fill="none" stroke="currentColor" stroke-width="2.2" viewbox="0 0 24 24"><path d="M19 12H5M12 19l-7-7 7-7"></path></svg></div><div class="mtitle">Weather</div></div>
+<div class="mscroll">
+<div class="weather-hero" id="weatherHeroMobile" style="margin:14px 20px 0; border-radius:18px;">
+<div class="loc" id="weatherLocMobile"><svg fill="none" height="13" stroke="currentColor" stroke-width="2.4" viewbox="0 0 24 24" width="13"><path d="M12 21s7-6.5 7-11a7 7 0 0 0-14 0c0 4.5 7 11 7 11z"></path><circle cx="12" cy="10" r="2.4"></circle></svg>Detecting your location...</div>
+<div class="temp" id="weatherTempMobile">--°</div>
+<div class="desc" id="weatherDescMobile">Fetching live conditions</div>
+<div class="meta">
+<div>Wind<b id="weatherWindMobile">-- km/h</b></div>
+<div>Humidity<b id="weatherHumidityMobile">--%</b></div>
+<div>Feels like<b id="weatherFeelsMobile">--°</b></div>
+</div>
+</div>
+<div class="weather-forecast" id="weatherForecastMobile" style="margin:0 20px;"></div>
+<div class="weather-advisory" id="weatherAdvisoryMobile" style="margin:16px 20px 0; display:none;">
+<svg fill="none" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24"><path d="M12 3 2 20h20L12 3z"></path><path d="M12 10v4"></path><circle cx="12" cy="17" fill="currentColor" r=".6"></circle></svg>
+<p id="weatherAdvisoryTextMobile"></p>
+</div>
+<button class="btn-outline" onclick="fetchLiveWeather('Mobile')" style="margin:16px 20px 20px; width:calc(100% - 40px); justify-content:center;"><svg fill="none" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24"><path d="M4 12a8 8 0 0 1 14-5M20 12a8 8 0 0 1-14 5"></path><path d="M17 3v4h-4M7 21v-4h4"></path></svg>Refresh</button>
+</div>
+<div class="mbottomnav"><button class="mnav-item" onclick="goto('dashboard')">⌂<span data-i18n="nav_home">Home</span></button><button class="mnav-item" onclick="goto('routeopt')">⌖<span data-i18n="nav_route">Route</span></button><button class="mnav-item" onclick="goto('vehicles')">▣<span data-i18n="nav_vehicles">Vehicles</span></button><button class="mnav-item" onclick="goto('alerts')">◉<span data-i18n="nav_alerts">Alerts</span></button><button class="mnav-item" onclick="toggleMobileMore(true)">☰<span data-i18n="nav_more">More</span></button></div>
+</div>

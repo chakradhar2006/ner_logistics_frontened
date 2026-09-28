@@ -1,0 +1,21 @@
+<div class="view mobile-page" data-page="velocity" style="flex-direction:column; height:100%;"><div class="mtop"><div class="back" onclick="goto('dashboard')"><svg fill="none" stroke="currentColor" stroke-width="2.2" viewbox="0 0 24 24"><path d="M19 12H5M12 19l-7-7 7-7"></path></svg></div><div class="mtitle">Velocity AI</div></div>
+<div class="vel-chat-shell" style="flex:1; border:none; border-radius:0; height:auto;">
+<div class="vel-chat-head">
+<div class="vel-chat-avatar"><svg fill="none" stroke="currentColor" stroke-width="2.4" viewbox="0 0 24 24"><path d="M13 2 3 14h7l-1 8 11-14h-7l1-6z"></path></svg></div>
+<div><div class="vel-chat-title">Velocity AI</div><div class="vel-chat-sub"><span class="dot-live"></span>Online · matching in real time</div></div>
+</div>
+<div class="vel-chat-body" id="velChatBodyMobile">
+<div class="vel-msg bot">Hi, I'm Velocity 👋 Tell me your pickup and drop location, and I'll find the safest, fastest driver for you.</div>
+</div>
+<div class="vel-quick-replies" id="velQuickRepliesMobile">
+<button class="vel-quick-btn" onclick="velSendQuick('Sector 4 to Main Terminal', 'velChatBodyMobile')">Sector 4 → Main Terminal</button>
+<button class="vel-quick-btn" onclick="velSendQuick('I need 2 vehicles going different directions', 'velChatBodyMobile')">2 vehicles, different directions</button>
+<button class="vel-quick-btn" onclick="velSendQuick('Confirm booking', 'velChatBodyMobile')">Confirm booking</button>
+</div>
+<div class="vel-chat-input-row">
+<input id="velInputMobile" onkeydown="if(event.key==='Enter') velSend('velInputMobile','velChatBodyMobile')" placeholder="Type your pickup &amp; drop..." type="text"/>
+<button class="vel-chat-send" onclick="velSend('velInputMobile','velChatBodyMobile')"><svg fill="none" stroke="currentColor" stroke-width="2.4" viewbox="0 0 24 24"><path d="M22 2 11 13"></path><path d="M22 2l-7 20-4-9-9-4 20-7z"></path></svg></button>
+</div>
+</div>
+<div class="mbottomnav"><button class="mnav-item" onclick="goto('dashboard')">⌂<span data-i18n="nav_home">Home</span></button><button class="mnav-item" onclick="goto('routeopt')">⌖<span data-i18n="nav_route">Route</span></button><button class="mnav-item" onclick="goto('vehicles')">▣<span data-i18n="nav_vehicles">Vehicles</span></button><button class="mnav-item" onclick="goto('alerts')">◉<span data-i18n="nav_alerts">Alerts</span></button><button class="mnav-item" onclick="toggleMobileMore(true)">☰<span data-i18n="nav_more">More</span></button></div>
+</div>

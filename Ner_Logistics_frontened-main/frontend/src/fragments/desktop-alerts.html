@@ -1,0 +1,30 @@
+<div class="app-content">
+<div class="page-head">
+<div><div class="page-title" data-i18n="page_alerts_title">Alerts &amp; Notifications</div><div class="page-sub" data-i18n="page_alerts_sub">Live incident, weather and logistics alerts across all districts.</div></div>
+<div class="page-actions">
+<div style="position:relative;">
+<button class="btn-outline" id="alertsFilterBtn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 5h16M7 12h10M10 19h4"/></svg><span id="alertsFilterLabel" data-i18n="common_filterAll">Filter: All</span></button>
+<div class="alerts-filter-menu" id="alertsFilterMenu">
+<div class="alerts-filter-option active" data-filter="" data-i18n-key="alert_filter_all"><span data-i18n="alert_filter_all">All</span></div>
+<div class="alerts-filter-option" data-filter="CRITICAL" data-i18n-key="alert_filter_critical"><span data-i18n="alert_filter_critical">Critical</span></div>
+<div class="alerts-filter-option" data-filter="HIGH RISK" data-i18n-key="alert_filter_highrisk"><span data-i18n="alert_filter_highrisk">High Risk</span></div>
+<div class="alerts-filter-option" data-filter="UPDATE" data-i18n-key="alert_filter_update"><span data-i18n="alert_filter_update">Update</span></div>
+<div class="alerts-filter-option" data-filter="LOGISTICS" data-i18n-key="alert_filter_logistics"><span data-i18n="alert_filter_logistics">Logistics</span></div>
+<div class="alerts-filter-option" data-filter="unread" data-i18n-key="alert_filter_unread"><span data-i18n="alert_filter_unread">Unread only</span></div>
+</div>
+</div>
+<button class="btn-solid-sm" id="alertsMarkAllReadBtn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M20 6L9 17l-5-5"/></svg><span data-i18n="common_markAllRead">Mark all read</span></button>
+</div>
+</div>
+<div class="panel-card">
+<div class="panel-head"><h3 data-i18n="alerts_heading">All Alerts</h3><span class="view-all" id="alertsUnreadBadge"></span></div>
+<div id="alertsListDesktop">
+<div class="alert-item critical"><div class="alert-top"><span class="alert-tag critical">CRITICAL</span><span class="alert-time">10m ago</span></div><div class="alert-title">Road blocked: NH-44 Landslide</div><div class="alert-desc">Heavy rainfall has caused a severe landslide blocking both lanes near Sector 7. Convoys are being rerouted via Highway 42.</div></div>
+<div class="alert-item highrisk"><div class="alert-top"><span class="alert-tag highrisk">HIGH RISK</span><span class="alert-time">45m ago</span></div><div class="alert-title">Sector 4 Heavy Rain</div><div class="alert-desc">Visibility reduced to under 50m. All vehicles in Sector 4 advised to reduce speed and maintain radio contact.</div></div>
+<div class="alert-item"><div class="alert-top"><span class="alert-tag update">UPDATE</span><span class="alert-time">2h ago</span></div><div class="alert-title">Bridge Maintenance Complete</div><div class="alert-desc">Structural repairs on Teesta Bridge finished ahead of schedule. Route reopened to full load capacity.</div></div>
+<div class="alert-item"><div class="alert-top"><span class="alert-tag logistics">LOGISTICS</span><span class="alert-time">3h ago</span></div><div class="alert-title">Convoy C-09 Arrived</div><div class="alert-desc">Medical supplies convoy C-09 has successfully reached Hub B without incident.</div></div>
+<div class="alert-item"><div class="alert-top"><span class="alert-tag update">UPDATE</span><span class="alert-time">5h ago</span></div><div class="alert-title">Weekly Safety Briefing Posted</div><div class="alert-desc">Regional safety briefing for the week of Aug 24 is now available for all field officers.</div></div>
+<div class="alert-item"><div class="alert-top"><span class="alert-tag logistics">LOGISTICS</span><span class="alert-time">6h ago</span></div><div class="alert-title">Fleet Inspection Reminder</div><div class="alert-desc">14 vehicles are due for scheduled maintenance inspection before end of month.</div></div>
+</div>
+</div>
+</div>

@@ -1,0 +1,18 @@
+<div class="app-content">
+<div class="page-head"><div><div class="page-title" data-i18n="page_vehicles_title">Vehicle Fleet</div><div class="page-sub" data-i18n="page_vehicles_sub">Registered vehicles and their assigned drivers across the logistics network.</div></div><div class="page-actions"><button class="btn-outline" onclick="goto('register'); setTimeout(()=&gt;setRegisterDriver(),0);"><svg fill="none" stroke="currentColor" stroke-width="2.2" viewbox="0 0 24 24"><path d="M12 5v14M5 12h14"></path></svg>Register Vehicle</button></div></div>
+<div id="disruptionRecoveryPanel" style="display:none;"></div>
+<div class="vehicle-grid" id="vehicleGrid">
+<div class="vehicle-card">
+<div class="vehicle-card-photo"><svg fill="none" stroke="currentColor" stroke-width="1.5" viewbox="0 0 24 24"><rect height="9" rx="1.5" width="13" x="1" y="7"></rect><path d="M14 10h4l3 3v3h-7z"></path><circle cx="6" cy="18" r="1.6"></circle><circle cx="17" cy="18" r="1.6"></circle></svg></div>
+<div class="vehicle-card-body"><div class="vehicle-card-top"><div><div class="vehicle-name">Tata 407</div><div class="vehicle-number">AS 01 AB 4821</div></div><span class="vehicle-status">Active</span></div><div class="vehicle-meta"><div class="vehicle-meta-box"><div class="vehicle-meta-k">Type</div><div class="vehicle-meta-v">Cargo Truck</div></div><div class="vehicle-meta-box"><div class="vehicle-meta-k">Capacity</div><div class="vehicle-meta-v">2.5 Ton</div></div></div><div class="vehicle-owner"><span class="vehicle-owner-avatar">R</span> Rajesh Kumar · Verified Driver</div></div>
+</div>
+<div class="vehicle-card">
+<div class="vehicle-card-photo"><svg fill="none" stroke="currentColor" stroke-width="1.5" viewbox="0 0 24 24"><rect height="9" rx="1.5" width="13" x="1" y="7"></rect><path d="M14 10h4l3 3v3h-7z"></path><circle cx="6" cy="18" r="1.6"></circle><circle cx="17" cy="18" r="1.6"></circle></svg></div>
+<div class="vehicle-card-body"><div class="vehicle-card-top"><div><div class="vehicle-name">Mahindra Bolero Pickup</div><div class="vehicle-number">ML 05 C 9124</div></div><span class="vehicle-status">Active</span></div><div class="vehicle-meta"><div class="vehicle-meta-box"><div class="vehicle-meta-k">Type</div><div class="vehicle-meta-v">Utility Pickup</div></div><div class="vehicle-meta-box"><div class="vehicle-meta-k">Capacity</div><div class="vehicle-meta-v">1.7 Ton</div></div></div><div class="vehicle-owner"><span class="vehicle-owner-avatar">A</span> Amit Singh · Verified Driver</div></div>
+</div>
+<div class="vehicle-card" id="newDriverVehicleCard" style="display:none;">
+<div class="vehicle-card-photo" id="newDriverVehiclePhoto"><svg fill="none" stroke="currentColor" stroke-width="1.5" viewbox="0 0 24 24"><rect height="9" rx="1.5" width="13" x="1" y="7"></rect><path d="M14 10h4l3 3v3h-7z"></path><circle cx="6" cy="18" r="1.6"></circle><circle cx="17" cy="18" r="1.6"></circle></svg></div>
+<div class="vehicle-card-body"><div class="vehicle-card-top"><div><div class="vehicle-name">New Driver Vehicle</div><div class="vehicle-number" id="newVehicleNumber">Registration pending</div></div><span class="vehicle-status">Active</span></div><div class="vehicle-meta"><div class="vehicle-meta-box"><div class="vehicle-meta-k">Type</div><div class="vehicle-meta-v">Registered Vehicle</div></div><div class="vehicle-meta-box"><div class="vehicle-meta-k">Status</div><div class="vehicle-meta-v">Verified</div></div></div><div class="vehicle-owner"><span class="vehicle-owner-avatar">D</span> New Driver · Verified License</div></div>
+</div>
+</div>
+</div>

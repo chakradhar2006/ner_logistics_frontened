@@ -1,0 +1,28 @@
+<div class="app-content desktop-operation">
+<div class="desktop-operation-head"><div><div class="desktop-operation-title">Settings</div><div class="desktop-operation-sub">Manage notification, map and sync preferences. Saved to your account.</div></div><div class="online-badge">SYSTEM ONLINE</div></div>
+<div class="operation-grid">
+<div class="operation-card">
+<div class="desktop-setting-row"><div class="desktop-setting-icon"><svg fill="none" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24"><path d="M18 8a6 6 0 0 0-12 0c0 7-3 7-3 9h18c0-2-3-2-3-9"></path><path d="M10 21h4"></path></svg></div><div style="flex:1;"><h4>Critical alerts</h4><p>Notify immediately for Critical severity incidents.</p></div><label class="ner-toggle"><input type="checkbox" id="setNotifyCritical"><span class="slider"></span></label></div>
+<div class="desktop-setting-row"><div class="desktop-setting-icon"><svg fill="none" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24"><path d="M18 8a6 6 0 0 0-12 0c0 7-3 7-3 9h18c0-2-3-2-3-9"></path><path d="M10 21h4"></path></svg></div><div style="flex:1;"><h4>High-risk alerts</h4><p>Notify for High severity incidents and risky roads.</p></div><label class="ner-toggle"><input type="checkbox" id="setNotifyHighRisk"><span class="slider"></span></label></div>
+<div class="desktop-setting-row"><div class="desktop-setting-icon"><svg fill="none" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24"><path d="M18 8a6 6 0 0 0-12 0c0 7-3 7-3 9h18c0-2-3-2-3-9"></path><path d="M10 21h4"></path></svg></div><div style="flex:1;"><h4>General updates</h4><p>Notify for routine status updates and completed maintenance.</p></div><label class="ner-toggle"><input type="checkbox" id="setNotifyUpdates"><span class="slider"></span></label></div>
+<div class="desktop-setting-row"><div class="desktop-setting-icon"><svg fill="none" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24"><path d="M9 18V5l12-2v13"></path><circle cx="6" cy="18" r="3"></circle><circle cx="18" cy="16" r="3"></circle></svg></div><div style="flex:1;"><h4>Alert sound</h4><p>Play a sound when a new alert arrives while the app is open.</p></div><label class="ner-toggle"><input type="checkbox" id="setNotifySound"><span class="slider"></span></label></div>
+</div>
+<div>
+<div class="operation-card" style="margin-bottom:16px;">
+<h3 data-i18n="common_language">Language</h3>
+<div class="ner-form-row"><select id="setLanguage"></select></div>
+<p style="font-size:11.5px;color:var(--text-faint);line-height:1.4;margin-top:2px;">Regional-language translations are AI-generated and cover navigation and page labels. Live data (incident reports, alerts) stays in the language it was entered.</p>
+</div>
+<div class="operation-card" style="margin-bottom:16px;">
+<h3>Map &amp; Refresh</h3>
+<div class="ner-form-row"><label>Default map layer</label><select id="setMapLayer"><option value="all">All layers</option><option value="vehicles">Vehicles only</option><option value="incidents">Incidents only</option><option value="roads">Roads only</option></select></div>
+<div class="ner-form-row"><label>Live refresh interval</label><select id="setRefreshInterval"><option value="10">10 seconds</option><option value="30">30 seconds</option><option value="60">1 minute</option><option value="120">2 minutes</option></select></div>
+</div>
+<div class="desktop-status-card"><div class="desktop-status-icon"><svg fill="none" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24"><path d="M4 12a8 8 0 0 1 14-5M20 12a8 8 0 0 1-14 5"></path><path d="M17 3v4h-4M7 21v-4h4"></path></svg></div><h4>Offline-first operations</h4><p>Field reports remain available when connectivity is weak. Queued records synchronize automatically once the network returns.</p><a onclick="goto('sync')" style="display:inline-block;margin-top:8px;font-size:12.5px;font-weight:700;color:var(--primary);cursor:pointer;">Go to Data Sync →</a></div>
+</div>
+</div>
+<div class="settings-save-bar">
+<button class="btn-solid-sm" id="settingsSaveBtn">Save Settings</button>
+<span class="settings-save-msg" id="settingsSaveMsg"></span>
+</div>
+</div>

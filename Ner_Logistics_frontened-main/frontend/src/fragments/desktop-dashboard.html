@@ -1,0 +1,47 @@
+<div class="app-content">
+<div class="greet-row">
+<div>
+<div class="greet-title" id="dashboardGreetTitle">Good morning, Director</div>
+<div class="greet-date" id="dashboardGreetDate"><svg fill="none" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24"><rect height="16" rx="2" width="18" x="3" y="5"></rect><path d="M8 3v4M16 3v4M3 10h18"></path></svg><span></span></div>
+</div>
+<div class="online-badge">SYSTEM ONLINE</div>
+</div>
+<div class="stat-grid">
+<div class="stat-card"><div class="stat-top"><span class="stat-label">Active Vehicles</span><div class="stat-icon" style="background:var(--primary-light);color:var(--primary-dark);"><svg fill="none" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24"><rect height="9" rx="1.5" width="13" x="1" y="7"></rect><path d="M14 10h4l3 3v3h-7z"></path><circle cx="6" cy="18" r="1.6"></circle><circle cx="17" cy="18" r="1.6"></circle></svg></div></div><div class="stat-value" id="statVehiclesDesktop">1,248</div><div class="stat-note up"><svg fill="none" stroke="currentColor" stroke-width="2.5" viewbox="0 0 24 24"><path d="M4 15l6-6 4 4 6-8"></path></svg>+12% vs last week</div></div>
+<div class="stat-card"><div class="stat-top"><span class="stat-label">Active Deliveries</span><div class="stat-icon" style="background:var(--primary-light);color:var(--primary-dark);"><svg fill="none" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24"><rect height="4" rx="1" width="18" x="3" y="4"></rect><path d="M5 8v11a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V8"></path><path d="M10 12h4"></path></svg></div></div><div class="stat-value" id="statDeliveriesDesktop">892</div><div class="stat-note"><svg fill="none" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24"><circle cx="12" cy="12" r="9"></circle><path d="M12 7v5l3 3"></path></svg>On schedule: 94%</div></div>
+<div class="stat-card"><div class="stat-top"><span class="stat-label">Blocked Roads</span><div class="stat-icon" style="background:#FCE8E8;color:#DC2626;"><svg fill="none" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24"><path d="M4 20 9 4h6l5 16"></path><path d="M10.3 14h3.4"></path></svg></div></div><div class="stat-value" id="statRoadsDesktop">14</div><div class="stat-note warn"><svg fill="none" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24"><path d="M12 3 2 20h20L12 3z"></path><path d="M12 10v4"></path></svg>+3 new today</div></div>
+<div class="stat-card"><div class="stat-top"><span class="stat-label">Active Incidents</span><div class="stat-icon" style="background:#FEF3C7;color:#92400E;"><svg fill="none" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24"><path d="M12 3 2 20h20L12 3z"></path><path d="M12 10v4"></path><circle cx="12" cy="17" fill="currentColor" r=".6"></circle></svg></div></div><div class="stat-value" id="statIncidentsDesktop">27</div><div class="stat-note danger"><svg fill="none" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24"><circle cx="12" cy="12" r="9"></circle><path d="M12 8v5M12 16h.01"></path></svg>8 critical</div></div>
+</div>
+<div class="two-panel">
+<div class="panel-card">
+<div class="panel-head"><h3>Live Operations Map</h3><div class="panel-head-tools"><svg fill="none" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24"><path d="M4 5h16M7 12h10M10 19h4"></path></svg><svg fill="none" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24"><path d="M8 3H5a2 2 0 0 0-2 2v3M16 3h3a2 2 0 0 1 2 2v3M8 21H5a2 2 0 0 1-2-2v-3M16 21h3a2 2 0 0 0 2-2v-3"></path></svg></div></div>
+<div class="map-canvas" id="liveMapWrap">
+<div id="liveMapDesktop" style="position:absolute;inset:0;"></div>
+<div class="map-loading" id="liveMapLoading">Loading live map…</div>
+<div class="map-controls">
+<div class="map-ctrl-btn" id="liveMapZoomIn" title="Zoom in"><svg fill="none" stroke="currentColor" stroke-width="2.4" viewbox="0 0 24 24"><path d="M12 5v14M5 12h14"></path></svg></div>
+<div class="map-ctrl-btn" id="liveMapZoomOut" title="Zoom out"><svg fill="none" stroke="currentColor" stroke-width="2.4" viewbox="0 0 24 24"><path d="M5 12h14"></path></svg></div>
+<div class="map-ctrl-btn" id="liveMapLocate" title="My location"><svg fill="none" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24"><circle cx="12" cy="12" r="3"></circle><path d="M12 2v3M12 19v3M2 12h3M19 12h3"></path></svg></div>
+<div class="map-ctrl-btn" id="liveMapFullscreen" title="Fullscreen"><svg fill="none" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24"><path d="M8 3H5a2 2 0 0 0-2 2v3M16 3h3a2 2 0 0 1 2 2v3M8 21H5a2 2 0 0 1-2-2v-3M16 21h3a2 2 0 0 0 2-2v-3"></path></svg></div>
+</div>
+<div class="map-legend">
+<div class="item"><span class="legend-dot" style="background:#2563EB;"></span>Active Vehicle</div>
+<div class="item"><span style="width:0;height:0;border-left:5px solid transparent;border-right:5px solid transparent;border-bottom:8px solid #EF4444;"></span>Critical Incident</div>
+<div class="item"><span class="legend-line" style="background:#F87171;"></span>Blocked Road</div>
+<label class="item" style="cursor:pointer;"><input type="checkbox" id="liveMapLayerVehicles" checked style="margin:0;">&nbsp;Vehicles</label>
+<label class="item" style="cursor:pointer;"><input type="checkbox" id="liveMapLayerIncidents" checked style="margin:0;">&nbsp;Incidents</label>
+<label class="item" style="cursor:pointer;"><input type="checkbox" id="liveMapLayerRoads" checked style="margin:0;">&nbsp;Roads</label>
+</div>
+</div>
+</div>
+<div class="panel-card">
+<div class="panel-head"><h3>Recent Alerts</h3><span class="view-all" onclick="goto('alerts')" style="cursor:pointer;">View All</span></div>
+<div id="dashboardAlertsListDesktop">
+<div class="alert-item critical"><div class="alert-top"><span class="alert-tag critical">CRITICAL</span><span class="alert-time">10m ago</span></div><div class="alert-title">Road blocked: NH-44 Landslide</div><div class="alert-desc">Heavy rainfall has caused a severe landslide blocking both lanes near...</div></div>
+<div class="alert-item highrisk"><div class="alert-top"><span class="alert-tag highrisk">HIGH RISK</span><span class="alert-time">45m ago</span></div><div class="alert-title">Sector 4 Heavy Rain</div><div class="alert-desc">Visibility reduced to under 50m. All vehicles in Sector 4 advised to reduce...</div></div>
+<div class="alert-item"><div class="alert-top"><span class="alert-tag update">UPDATE</span><span class="alert-time">2h ago</span></div><div class="alert-title">Bridge Maintenance Complete</div><div class="alert-desc">Structural repairs on Teesta Bridge finished ahead of schedule. Route...</div></div>
+<div class="alert-item"><div class="alert-top"><span class="alert-tag logistics">LOGISTICS</span><span class="alert-time">3h ago</span></div><div class="alert-title">Convoy C-09 Arrived</div><div class="alert-desc">Medical supplies convoy C-09 has successfully reached Hub B without...</div></div>
+</div>
+</div>
+</div>
+</div>
